@@ -91,7 +91,7 @@ local gui_handler = require(modules:WaitForChild("InventoryHandler")).Modules.GU
 -- discord message
 if not DISABLE_DISCORD then
     setthreadidentity(2);
-    gui_handler:MessageBox("Did you know Bloxburg Grinders has a discord server? The link has been copied to your clipboard, simply ctrl + v into your browser to join!");
+    gui_handler:MessageBox("CHATGPT on TOP!");
     setthreadidentity(our_identity);
     if setclipboard then
         setclipboard("https://discord.gg/9QZbbgvyMk")
@@ -889,15 +889,16 @@ local old_mt; old_mt = hookmetamethod(game, "__namecall", function(...)
     return old_mt(...);
 end);
 
-library:create_window("Bloxburg Grinders", 220);
+library:create_window("Jaypee", 220);
 
-local hair_tab = library:add_section("Hairdressers");
+--[[local hair_tab = library:add_section("Hairdressers");
 local ice_cream_tab = library:add_section("Ben's Ice Cream");
 local supermarket_cashier_tab = library:add_section("Supermarket Cashier");
-local pizza_delivery_tab = library:add_section("Pizza Planet Delivery");
-local instant_delivery_tab = library:add_section("INSTANT Pizza Delivery");
+--]]
+local pizza_delivery_tab = library:add_section("Slow Pizza Delivery");
+local instant_delivery_tab = library:add_section("Instant Pizza Delivery");
 
-hair_tab:add_toggle("Autofarm", "hair_farm", function(state)
+--[[hair_tab:add_toggle("Autofarm", "hair_farm", function(state)
     hairdressers:toggle_farming(state);
 end);
 
@@ -914,6 +915,8 @@ supermarket_cashier_tab:add_toggle("Autofarm", "market_cashier_farm", function(s
 end);
 
 supermarket_cashier_tab:add_toggle("Legit Mode", "market_cashier_farm_legit", function() end);
+
+--]]
 
 pizza_delivery_tab:add_toggle("Autofarm", "pizza_delivery_farm", function(state)
     pizza_delivery:toggle_farming(state);
